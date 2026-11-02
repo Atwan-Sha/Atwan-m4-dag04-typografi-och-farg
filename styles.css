@@ -46,7 +46,7 @@
 	padding: 0;
 	margin: 0;
 }
-*:focus {
+*:focus-visible {
 	outline: 3px solid var(--color-focus);
 	outline-offset: 2px;
 }
@@ -144,6 +144,8 @@ img {
 .btn {
 	background-color: var(--color-accent);
 	color: var(--color-text-light);
+	font-family: var(--font-family-hero);
+	font-size: var(--font-size-hero);
 	padding: 12px 20px;
 	border: none;
 	border-radius: 6px;
@@ -169,3 +171,4 @@ textarea {
 	margin: 8px 0;
 	border: 2px solid var(--color-input-border);
 }
+
