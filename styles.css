@@ -182,6 +182,9 @@ textarea {
 	width: 100%;
 	max-width: 28rem;
 }
+label, legend {
+  font-weight: bold;
+}
 form .btn {
 	margin-top: 16px;
 }
