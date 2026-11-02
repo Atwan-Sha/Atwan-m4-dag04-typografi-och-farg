@@ -6,6 +6,7 @@
   --color-accent: #8c1010;
   --color-accent-hover: #6f0c0c;
   --color-text: #222222;
+  --color-text-light: #ffffff;
   --color-heading: #3b2418;
   --color-card-background: #ffffff;
   --color-card-border: #e3d5c3;
@@ -44,7 +45,7 @@
 }
 
 body {
-	background-color: #fffaf3;
+	background-color: var(--color-background);
 	margin: 0;
 	/* min-height: 100vh;  */
 	/* fill viewport, test */
@@ -53,41 +54,43 @@ body {
 h1,
 h2,
 h3 {
-	color: #3b2418;
-}
-header h1 {
-	color: #ffffff;
+	color: var(--color-heading);
 }
 p {
-	color: #222222;
-	line-height: 1.5;
+	color: var(--color-text);
+	line-height: var(--line-height-body);
 }
 .price {
-	color: #8c1010;
+	color: var(--color-accent);
 	font-weight: bold;
 	margin-top: 8px;
 }
 
 header {
-	background-color: #5b3a29;
-	color: #ffffff;
+	background-color: var(--color-header);
 	padding: 16px 24px;
+}
+header h1 {
+	color: var(--color-text-light);
 }
 nav ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
 }
+
 footer {
-	background-color: #2b1c14;
-	color: #ffffff;
+	background-color: var(--color-footer);
+	color: var(--color-text-light);
 	padding: 16px 24px;
+}
+footer p {
+  color: var(--color-text-light);
 }
 
 nav a,
 footer a {
-	color: #ffffff;
-	/* color: #8c1010; */
+	color: var(--color-text-light);
 	text-decoration: none;
 }
 nav a:hover,
@@ -96,22 +99,22 @@ footer a:hover {
 }
 
 #hero {
-	background-color: #f3e3cf;
+	background-color: var(--color-hero-background);
 	padding: 32px 24px;
 	text-align: center;
 }
 
 article {
-	background-color: #ffffff;
-	border: 1px solid #e3d5c3;
+	background-color: var(--color-card-background);
+	border: 1px solid var(--color-card-border);
 	border-radius: 8px;
 	padding: 16px;
 	margin-bottom: 16px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-article:nth-child(even) {
-	background-color: #f9f5f0;
-}
+/* article:nth-child(even) {
+	background-color: var(--color-hero-background);
+} */
 
 img {
 	max-width: 100%;
@@ -125,8 +128,8 @@ main {
 }
 
 .btn {
-	background-color: #8c1010;
-	color: #ffffff;
+	background-color: var(--color-accent);
+	color: var(--color-text-light);
 	padding: 12px 20px;
 	border: none;
 	border-radius: 6px;
@@ -134,7 +137,7 @@ main {
 	display: inline-block;
 }
 .btn:hover {
-	background-color: #6f0c0c;
+	background-color: var(--color-accent-hover);
 	cursor: pointer;
 }
 
