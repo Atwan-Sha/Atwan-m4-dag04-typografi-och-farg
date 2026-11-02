@@ -1,19 +1,46 @@
-body {
-	background-color: #fffaf3;
-	margin: 0;
-  /* min-height: 100vh;  */
-  /* fill viewport, test */
+
+:root {
+  --color-background: #fffaf3;
+  --color-header: #5b3a29;
+  --color-footer: #2b1c14;
+  --color-accent: #8c1010;
+  --color-accent-hover: #6f0c0c;
+  --color-text: #222222;
+  --color-heading: #3b2418;
+  --color-card-background: #ffffff;
+  --color-card-border: #e3d5c3;
+  --color-hero-background: #f3e3cf;
+
+  --font-family-body: system-ui, Segoe UI, Roboto, sans-serif;
+  --font-size-body: 1rem;
+  --line-height-body: 1.6;
+
+  --font-family-heading: Georgia, serif;
+  --font-size-h1: 1.75rem;
+  --font-size-h2: 1.75rem;
+  --font-size-h3: 1.25rem;
+  --line-height-heading: 1.2;
+
+  --font-family-hero: system-ui;
+  --font-size-hero: 1.125rem;
+  --line-height-hero: 1.6;
+
 }
+
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
-  /* padding: 0;
-  margin: 0; */
+	padding: 0;
+  margin: 0;
 }
-/* Vad det gör: 
-Säkerställer att padding och border 
-ingår i elementets totala bredd och höjd */
+
+body {
+	background-color: #fffaf3;
+	margin: 0;
+	/* min-height: 100vh;  */
+	/* fill viewport, test */
+}
 
 h1,
 h2,
@@ -88,8 +115,6 @@ main {
 	margin: 0 auto;
 	padding: 24px;
 }
-/* Vad margin: 0 auto gör: centrerar elementet 
-horisontellt (delar ledigt utrymme) inom sin förälder. */
 
 .btn {
 	background-color: #8c1010;
@@ -106,24 +131,57 @@ horisontellt (delar ledigt utrymme) inom sin förälder. */
 }
 
 /* 
-Steg 8: Boxmodellen avritad från 1a article 
-efter modifikation i devtools
+*Designspecifikation: Kafé Kardemumma
+Så här ska sidan se ut. Följ värdena exakt.
 
-  +----------------------------------------------------------+
-  | margin                            0                      |
-  |   +--------------------------------------------------+   |
-  |   | border                        1                  |   |
-  |   |   +------------------------------------------+   |   |
-  |   |   | padding                  16              |   |   |
-  |   |   |       +------------------------------+   |   |   |
-  |   |   | 100   |       934x398.094            |   |   |   |
-  |   |   |       +------------------------------+   |   |   |
-  |   |   |                          16          |   |   |   |
-  |   |   +------------------------------------------+   |   |
-  |   |                               1                  |   |
-  |   +--------------------------------------------------+   |
-  |                                   16                     |
-  +----------------------------------------------------------+
+## Färger
+| Namn | Hex | Används till |
+|---|---|---|
+| Sidbakgrund | `#fffaf3` | `body` |
+| Brun | `#5b3a29` | sidhuvud |
+| Mörkbrun | `#2b1c14` | sidfot |
+| Röd (accent) | `#8c1010` | knappar, länkar, priser |
+| Mörkröd (hover) | `#6f0c0c` | knapp vid hover |
+| Text | `#222222` | brödtext |
+| Rubrikfärg | `#3b2418` | h1–h3 (utom i sidhuvudet) |
+| Kortets bakgrund | `#ffffff` | `article` |
+| Kortets kantlinje | `#e3d5c3` | `article` |
+| Hero-bakgrund | `#f3e3cf` | `#hero` |
+
+## Avstånd (8-punktsskala)
+8, 16, 24, 32, 48 px.
+
+## Sidhuvud och sidfot
+Padding 16 px uppifrån/ned, 24 px åt sidorna. Vit text.
+
+## Kort (`article`)
+Vit bakgrund, 1 px kantlinje, hörnradie 8 px, padding 16 px, 16 px mellanrum under.
+
+## Knapp (`.knapp`)
+Bakgrund röd, vit text, padding 12 px / 20 px, hörnradie 6 px, ingen understrykning.
+
+## Innehållets bredd
+Max 1100 px, centrerat, 24 px padding.
+
+## Typografi (tillägg för dag 4)
+| Element | Typsnitt | Storlek | Radavstånd |
+|---|---|---|---|
+| Brödtext | system-ui, Segoe UI, Roboto, sans-serif | 1 rem (16 px) | 1.6 |
+| h1 | Georgia, serif | 1.75 rem | 1.2 |
+| h2 | Georgia, serif | 1.75 rem | 1.2 |
+| h3 | Georgia, serif | 1.25 rem | 1.2 |
+| Hero-text | system-ui | 1.125 rem | 1.6 |
+
+## Mer färg
+| Funktion | Hex |
+|---|---|
+| Länkfärg | `#8c1010` |
+| Länk vid hover | `#5e0a0a` |
+| Fokusmarkering | `#1a73e8` (3 px linje, 2 px avstånd) |
+| Formulärfältens kantlinje | `#8a7a6a` (2 px) |
+
+**Kontrastkrav:** All text ska klara minst 4,5:1. 
 */
+
 
 
