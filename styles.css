@@ -10,6 +10,10 @@
   --color-card-background: #ffffff;
   --color-card-border: #e3d5c3;
   --color-hero-background: #f3e3cf;
+  --color-link: #8c1010;
+  --color-link-hover: #5e0a0a;
+  --color-focus: #1a73e8;
+  --color-input-border: #8a7a6a;
 
   --font-family-body: system-ui, Segoe UI, Roboto, sans-serif;
   --font-size-body: 1rem;
@@ -33,6 +37,10 @@
 	box-sizing: border-box;
 	padding: 0;
   margin: 0;
+}
+*:focus {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
 }
 
 body {
